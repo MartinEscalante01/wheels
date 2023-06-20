@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/scss/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    </head>
+<body>
+    <header>
+        <div class="contenedor-header">
+            <div class="contenedor-logo">
+                <div>
+                    <img src="/assets/img/car-logo.png" alt="">
+                </div>
+            </div>
+            <div class="contenedor-menu">
+                <div>
+                    <span><i class="fa-solid fa-bars"></i></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="seccionPrincipal">
+        <div class="contenedor-seccionPrincipal">
+            <div>
+                <h2>Powelful, Fun and</h2>
+                <div>
+                    <h1>fierce to <span>drive</span></h1>
+                </div>
+                
+                <p>Real Poise, Real power, real perfomance</p>
+                <button><span>book a test ride</span><span><i class="fa-regular fa-circle-right"></i></span></button>
+                <div class="precio">
+                    <h2>starting at <span>$32,799</span></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="seccion-about">
+        <div class="contenedor-about">
+            <div class="contenedor-info-about">
+                <h3>Acerca de</h3>
+                <h2>gla999</h2>
+                <p>GLA999 está hecho para sentir una experiencia lujosa de más fuerza, más comodidad, más seguridad y más flexibilidad. Con una tecnología en constante evolución, GLA999 le brinda la experiencia de conducir un automóvil de alta tecnología para asegurarse de que cada viaje sea placentero.</p>
+            </div>
+            <div>
+                <div class="contenedor-logo-youtube">
+                    <button id="video"><i class="fa-regular fa-circle-play" style="color: #ff0000;"></i></button>
+                </div>
+                <div id="contenedor-video" class="contenedor-video-youtube">
+                    <iframe src="https://www.youtube.com/embed/xJQVfe6SR94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="contenedor-auto">
+                    <img src="/assets/img/after-car.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="seccion-galeria">
+        <div class="contenedor-imagenes">
+            <div class="titulo-imagenes">
+                <h3>smart</h3>
+                <h2>feature</h2>
+                <p>GLA999 made with smart internet connected technology to protect drivers more efficiently, and even drive themselves. GLA999 is having advance features which made it smarter than other cars.</p>
+            </div>
+            <div class="contenedor-opciones">
+                <div>
+                    <select name="" id="opciones" onchange="seleccionar()">
+                        <option value="exterior">exterior</option>
+                        <option value="interior">interior</option>
+                    </select>
+                    
+                </div>
+                <div class="contenedor-imagenes-galeria" >
+                    <ul id="galeria">
+                        <li><img src="/assets/img/image-4-s (1).jpg" alt=""></li>
+                        <li><img src="/assets/img/image-9-s.jpg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contenedor-autos">
+        <div class="contenedor-color-auto">
+            <div class="text-color-auto">
+                <h3>Elegi el </h3>
+                <h2>color que amas</h2>
+                <p>
+                    Wheels GLA999 offers you multiple option to choose the color you love.
+                </p>
+            </div>
+            <div class="contenedor-img-auto">
+                <div id="imagenes-colores">
+                    <img src="/assets/img/variation-car-red.png" alt="">
+                </div>
+                <div class="botones-cambio" id="botones-colores">
+                    <button id="red" onclick="cambioColor('red')"><i class="fa-solid fa-circle fa-fade fa-lg" style="color: #ff0000;"></i></button>
+                    <button id="yellow" onclick="cambioColor('yellow')"><i class="fa-solid fa-circle fa-fade fa-lg" style="color: #c8bf14;"></i></button>
+                    <button id="aqua" onclick="cambioColor('aqua')"><i class="fa-solid fa-circle fa-fade fa-lg" style="color: #4f9895;"></i></button>
+                    <button id="greem" onclick="cambioColor('green')"><i class="fa-solid fa-circle fa-fade fa-lg" style="color: #519b4c;"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script src="/assets/js/main.js"></script>
+
+</body>
+</html>
