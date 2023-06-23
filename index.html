@@ -11,9 +11,10 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     </head>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 <body>
     <header>
-        <div class="contenedor-header">
+        <div class="contenedor-header" id="container-header">
             <div class="contenedor-logo">
                 <div>
                     <img src="/assets/img/car-logo.png" alt="">
@@ -21,8 +22,15 @@
             </div>
             <div class="contenedor-menu">
                 <div>
-                    <span><i class="fa-solid fa-bars"></i></span>
+                    <span class="focus-menu"><button id="mostrar"><i class="fa-solid fa-bars"></i></button></span>
                 </div>
+            </div>
+            <div id="menu-mb">
+                <ul id="ules">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Nosotros</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
             </div>
         </div>
     </header>
@@ -54,7 +62,7 @@
                     <button id="video"><i class="fa-regular fa-circle-play" style="color: #ff0000;"></i></button>
                 </div>
                 <div id="contenedor-video" class="contenedor-video-youtube">
-                    <iframe src="https://www.youtube.com/embed/xJQVfe6SR94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xJQVfe6SR94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <div class="contenedor-auto">
                     <img src="/assets/img/after-car.png" alt="">
@@ -106,10 +114,93 @@
                     <button id="greem" onclick="cambioColor('green')"><i class="fa-solid fa-circle fa-fade fa-lg" style="color: #519b4c;"></i></button>
                 </div>
             </div>
-
         </div>
     </section>
-    <script src="/assets/js/main.js"></script>
+    <section class="contendor-info">
+        <div class="contenedor-info-auto">
+            <div class="titulos-info">
+                <h2>Poderoso</h2>
+                <h3>MotorHecho a mano</h3>
+                <p>GLA999 viene con motor de 999 caballos de fuerza. El motor alcanzará una velocidad de 180 mph en segundos.</p>
+            </div>
+            <div class="contenedor-info-img">
+                <div class="container">
+                    <div class="container-img">
+                        <img src="/assets/img/motor.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h4>Poder maximo</h4>
+                        <h3>419 kw (570 cv) a 9000rpm</h3>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="container-img">
+                        <img src="/assets/img/speed-icon.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h4>Aceleracion 0-60 km/H</h4>
+                        <h3>3.4 segundo 0-60 km/h</h3>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="container-img">
+                        <img src="/assets/img/car-body-icon.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h4>cuerpo</h4>
+                        <h3>retractil techo duro</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/assets/js/main.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+        let menu = $("#menu-mb");
+        let mostrar = $("#mostrar");
+        let contenedor = $('#container-header')
+        let ules = $('#ules')
+        let li = ules.children();
+        let a = li.children();
+        function mostrarMenu() {
+    if ($(window).width() <= 768) {
+      if (menu.css("display") === "none") {
+        menu.css("display", "block");
+        menu.css("width", '40%');
+        menu.css("height", '100vh');
+        menu.css('background-color', 'white');
+        contenedor.css('align-items', 'initial');
+        contenedor.css('padding','0.3')
+        li.css('list-style','none')
+        li.css('padding','10px')
+        li.css('margin-top','10px')
+        a.css('text-decoration','none')
+
+      } else {
+        menu.css("display", 'none');
+        contenedor.css('align-items', 'center');
+        contenedor.css('padding','0.7rem')
+        
+      }
+    } else {
+      // Restaurar los estilos a valores predeterminados cuando el ancho de la ventana es inferior a 768px
+      menu.css("display", 'none');
+      menu.css("width", '');
+      menu.css("height", '');
+      menu.css('background-color', '');
+      contenedor.css('padding','0.7rem')
+      
+      
+    }
+  }
+
+  mostrar.on('click', mostrarMenu);
+  $(window).resize(mostrarMenu);
+        
+        });
+    </script>
 
 </body>
 </html>

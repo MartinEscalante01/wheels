@@ -35,3 +35,14 @@ function cambioColor(text){
     
 }
     
+        // let menu = document.getElementById("menu-mb")
+        // let mostrar = document.getElementById("mostrar")
+        // mostrar.addEventListener('click',function(){
+        //     if(menu.style.display == "block"){
+        //         menu.style.display = "none"
+        //     }else{
+        //         menu.style.display = "block"
+        //     }
+        // })
+        
+        
